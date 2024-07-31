@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupcakes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/cupcakes.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Cupcakes!
+            <img src="https://cdn-icons-png.freepik.com/512/3816/3816616.png?ga=GA1.1.135509690.1721262971"
+                alt="cupcake" width="40">
+        </h1>
+
+        <!--Form to create new cupcake-->
+        <form class="form-group m-auto w-75" id="new-cupcake-form">
+
+
+            <label for="flavor">Flavor:</label>
+            <input type="text" class="form-control mb-3" id="flavor" name="flavor" required>
+
+            <label for="size">Size:</label>
+            <div class="d-flex mb-3">
+                <div class="form-check mr-3">
+                    <input type="radio" id="small" name="size" value="small" class="form-check-input" required>
+                    <label for="small" class="form-check-label">Small</label>
+                </div>
+                <div class="form-check mr-3">
+                    <input type="radio" id="medium" name="size" value="medium" class="form-check-input">
+                    <label for="medium" class="form-check-label">Medium</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="large" name="size" value="large" class="form-check-input">
+                    <label for="large" class="form-check-label">Large</label>
+                </div>
+            </div>
+
+            <label for="rating">Rating:</label>
+            <input type="number" class="form-control mb-3" id="rating" name="rating" step="1" min="0" max="10" required>
+
+            <label for="image">Image:</label>
+            <input type="url" class="form-control" id="image" name="image">
+
+            <button type="submit" class="btn btn-primary mt-3">Add Cupcake</button>
+        </form>
+    </div>
+
+    <!--Container to display cupcakes-->
+    <div id="cupcakes-list" class="row mt-4 justify-content-center"></div>
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/cupcakes.js"></script>
+</body>
+
+</html>

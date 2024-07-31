@@ -1,0 +1,26 @@
+#cupcakes-list {
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    /* wrap to the next line */
+    justify-content: center;
+
+}
+
+.cupcake-card {
+    max-width: 400px;
+    height: 400px;
+
+    margin: 0 auto;
+    /* Margin between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for better appearance */
+    display: flex;
+    flex-direction: column;
+    /* Aligns content vertically within the card */
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
